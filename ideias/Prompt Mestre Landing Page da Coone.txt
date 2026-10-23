@@ -1,0 +1,224 @@
+Prompt Mestre: Landing Page da Coonexa (com Orçamento Fechado Interativo)
+Como usar
+Revise a FICHA DA COONEXA. Tudo que veio do seu catálogo está preenchido; o que não existia no catálogo está como [PREENCHER].
+Rode o Prompt 1 (gera index.html).
+Rode o Prompt 2 na mesma conversa (gera style.css e script.js, incluindo a calculadora de orçamento).
+Confira o Checklist final.
+FICHA DA COONEXA
+## DADOS DO NEGÓCIO
+- Nome: Coonexa
+- Descritor: Tecnologia • Web • Marketing
+- Slogan: Conectando negócios. Criando possibilidades.
+- Significado: COO (cooperação, colaboração, parceria) + NEXA (conexão entre empresas, pessoas, tecnologia e oportunidades)
+- Missão: conectar empresas a pessoas, tecnologias e oportunidades por meio de soluções digitais acessíveis, profissionais e estratégicas.
+- Valores: cooperação, conexão, transparência, qualidade, compromisso, inovação, evolução contínua.
+- Cidade/UF: São Luis de Montes Belos - Goiás
+- Endereço (só se for elegível ao Google Maps; se atende sem endereço público, omitir mapa e informar área atendida): sem local fixo
+- Horário de atendimento: das 8 as 18
+- WhatsApp (55DDDNUMERO): +55 (64) 9 96956530
+- E-mail comercial: victorhugo.slmb@gmail.com
+- Instagram: @coonexaweb
+- CNPJ/Razão social: Sem CNPJ
+- Tempo de mercado / números: SEM DADOS começando em 2026
+
+## PÚBLICO E COMUNICAÇÃO
+- Público: pequenas e médias empresas, comércio local, prestadores de serviços, profissionais autônomos, empresas que dependem de indicação e redes sociais, negócios sem site, empresas com presença digital desorganizada, empresas com tarefas manuais.
+- Prioridade inicial: empresas locais da minha região.
+- Tom de voz: profissional e acessível / próximo e consultivo
+- Principais objeções: "é caro", "vou ficar preso a mensalidade", "não sei o que está incluso", "e se eu precisar mudar algo depois?"
+- Posicionamento: venda baseada no problema do cliente, com transparência de escopo e preço.
+
+## SERVIÇOS (4 áreas)
+1. Tecnologia e informática: limpeza completa de computadores, formatação e reinstalação de sistemas, backup e organização de arquivos, instalação de programas, diagnóstico e resolução de problemas, configuração de computadores e periféricos.
+2. Desenvolvimento web: landing pages, sites institucionais e comerciais, catálogos digitais, páginas de orçamento, formulários e integrações.
+3. Presença digital e marketing local: Perfil da Empresa no Google, SEO básico e local, integração com WhatsApp, organização das informações comerciais, relatórios de desempenho.
+4. Sistemas e automação: cadastros, controle de clientes, agendamentos, pedidos, orçamentos, estoque, painéis, integrações, automação de processos repetitivos. (Sistemas = projeto com diagnóstico e orçamento próprio.)
+
+## PREÇOS (faixas do catálogo interno; valor exato ainda a definir)
+Landing Page Essencial: criação R$ 600–900 | mensalidade R$ 89–129
+Landing Page Profissional: criação R$ 1.000–1.800 | mensalidade R$ 149–249
+Presença Digital Completa: criação R$ 1.800–3.000+ | mensalidade R$ 249–399
+Pacote Presença Digital Local (Google + landing + WhatsApp + SEO básico): implantação R$ 1.490 | acompanhamento R$ 297
+Perfil da Empresa no Google (implantação): R$ 350–600
+Crescimento Local (mensal): R$ 250–400
+Alterações avulsas: ajuste de texto R$ 30–60 | imagens/seção simples R$ 50–100 | alteração de layout R$ 100–200 | nova página R$ 150–350 | nova funcionalidade a partir de R$ 200
+Sistemas: básico R$ 3.000–6.000 | intermediário R$ 6.000–15.000 | avançado R$ 15.000–40.000+ (SEMPRE sob diagnóstico, nunca preço fechado no site)
+Manutenção e limpeza de computadores: [PREENCHER: valores por serviço; o catálogo não tem preços para esta área]
+
+REGRA PARA O SITE: onde houver faixa, o Prompt trata o valor como `[PREENCHER: valor exato dentro da faixa R$ X–Y]`. Nada de faixa exibida como se fosse preço fechado.
+
+## ITENS SEMPRE COBRADOS À PARTE (exibir no bloco de orçamento)
+Domínio, hospedagem (se não incluída), anúncios pagos, gestão completa de redes sociais, produção de conteúdo em grande volume, novas páginas, funcionalidades personalizadas, desenvolvimento de sistemas, serviços de terceiros.
+
+## CONTEÚDO REAL DISPONÍVEL
+- Portfólio: La Rose Eventos (site institucional profissional já desenvolvido: marca, serviços, galeria, depoimentos, WhatsApp, Instagram, localização). Uso no site depende de AUTORIZAÇÃO do cliente: [CONFIRMAR autorização + prints liberados]
+- Depoimentos reais: SEM DEPOIMENTOS REAIS
+- FAQ conhecidas: usar as objeções acima
+- Mídias: [PREENCHER: logo, vídeos, fotos]
+
+## ESTILO
+- Estilo visual: [PREENCHER] (referência: bloco escuro, premium, tipografia grande nos preços, detalhes em fonte mono, cantos arredondados, pontilhado sutil de fundo)
+- Paleta (HEX): Assim como proposto no arquivo oficial Coonexa
+- Modo: com toggle claro
+- Tecnologia: CSS Puro com :root
+- Fontes: [PREENCHER ou propor par heading + mono coerente]
+- Animação: Moderada
+
+## DEV (rodapé)
+- Nome: Coonexa
+- Link: [PREENCHER]
+PROMPT 1: UX e ESTRUTURA HTML
+Você é Arquiteto de UX, Estrategista de Conversão e Desenvolvedor Front-End Sênior. Crie o HTML5 semântico completo da landing page da COONEXA, uma startup de tecnologia, web e marketing. Objetivo único: levar o visitante ao WhatsApp já informado, com preço e escopo claros, e transmitir credibilidade.
+
+# REGRAS DE CONDUTA
+1. NÃO invente nada: sem preços, CNPJ, endereço, anos de mercado, números de clientes, resultados, depoimentos, avaliações ou logos de clientes. Dado ausente vira `[PREENCHER: descrição]`, e você lista todos no final.
+2. A página é de uma empresa que vende transparência. Toda promessa precisa ser sustentável: nada de "garantia de primeiro lugar no Google", "resultado em X dias" ou "preço fechado" sem os limites de escopo ao lado.
+3. Copy de apoio (headlines, descrições, FAQ) você escreve, alinhada ao tom de voz da ficha. Depoimentos: apenas placeholders, nunca fictícios.
+4. Se faltar informação crítica (WhatsApp, cidade, tom de voz), faça no máximo 5 perguntas antes de gerar. Se o essencial estiver na ficha, gere direto.
+5. Sem CSS neste prompt: nada de `<style>` nem `style=""`.
+6. Não reproduza marcas, textos ou nomes de referências visuais. Aproveite apenas a lógica estrutural.
+7. Traga nome de variáveis compatíveis com o nome da classe, div tenha contexto e o que ela entrega.
+8. Não utilize forms e nem botões em forma de gota ou bolha, tirar a cara de IA
+
+# FICHA
+
+
+# REFERÊNCIA VISUAL
+Anexo: bloco de orçamento com título, card escuro, seletor de pacotes em abas (pílula), frase de valor, preço grande com unidade, rótulo mono de prazo/condição, duas colunas (INCLUÍDO com lista de setas | ADICIONAIS com checkboxes e valor à direita), rodapé com promessa de transparência e botão "Chamar no WhatsApp". Reproduza a estrutura e a hierarquia, com a identidade da Coonexa. Em 3 linhas, diga o que aproveitou antes do código.
+
+# FLUXO DA PÁGINA (ids em português, kebab-case)
+
+0. TOPO TÉCNICO: `<head>` completo (title e meta description com Coonexa + cidade, canonical placeholder, Open Graph, Twitter Card, favicon placeholder, preconnect de fontes), JSON-LD `ProfessionalService` com dados reais (placeholders onde faltar), skip link, botão flutuante de WhatsApp.
+
+1. `#inicio` HERO: header com logo, `<nav>` por âncoras, CTA WhatsApp e botão de menu mobile (`aria-expanded`, `aria-controls`). `<h1>` único em até 12 palavras ancorado no problema do cliente (ex.: negócio que depende só do Instagram, ou processos manuais). Subheadline com o slogan ou variação. CTA principal (WhatsApp) + secundário ("Ver orçamento", âncora para `#orcamento`). Faixa de confiança de 3 itens usando SOMENTE diferenciais reais da ficha (transparência de escopo, preço antes do contato, manutenção com limites claros) ou placeholders.
+
+2. `#problemas` DORES E SOLUÇÕES: 4 pares problema → solução, baseados na ficha (depende só do Instagram → landing page; organiza tudo manualmente → sistema/automação; site desatualizado → manutenção/reformulação; não aparece nas buscas locais → Perfil no Google). Cada par com CTA que abre o WhatsApp com mensagem específica.
+
+3. `#servicos` AS 4 ÁREAS: cards `<article>` (Tecnologia e informática, Desenvolvimento web, Presença digital e marketing local, Sistemas e automação), cada um com ícone SVG, benefício, 3 a 5 itens e CTA.
+
+4. `#manutencao` MANUTENÇÃO E LIMPEZA DE COMPUTADORES (seção de apresentação do serviço):
+   - Headline + subtítulo.
+   - "O que fazemos": limpeza completa, formatação e reinstalação, backup e organização de arquivos, instalação e configuração de programas, diagnóstico, configuração de periféricos.
+   - "Como funciona" em 4 passos (diagnóstico → orçamento → execução → entrega com orientação). Não prometa prazo ou garantia que não esteja na ficha.
+   - Faixa de preços usando placeholders `[PREENCHER]` por serviço.
+   - Espaço `[PREENCHER: foto/vídeo do serviço]` e CTA com mensagem específica de WhatsApp.
+
+5. `#orcamento` ORÇAMENTO FECHADO (componente central):
+   - `<h2>` com a promessa de orçamento antes do clique (ex.: "Orçamento fechado antes do clique.").
+   - Contêiner `data-quote` com:
+     - Seletor de pacotes (`role="tablist"`, abas `role="tab"` com `aria-selected`, painéis `role="tabpanel"`): Landing Page Essencial | Landing Page Profissional | Presença Local (pacote integrado) | Manutenção de computadores. Cada aba com `data-plan`, `data-price-base`, `data-price-unit` (ex.: "/ projeto", "/ serviço") e `data-recurring` (mensalidade, quando houver).
+     - Frase de valor do pacote, preço grande, rótulo mono de condição (ex.: "PRAZO E CONDIÇÕES: [PREENCHER]").
+     - Coluna INCLUÍDO: lista de itens do pacote conforme a ficha.
+     - Coluna ADICIONAIS: `<input type="checkbox" data-addon data-addon-price="N" data-addon-label="...">` com rótulo e valor à direita. Use as alterações avulsas e serviços complementares da ficha (nova página, Perfil no Google, alteração de layout, etc.).
+     - Total calculado: `<output data-quote-total aria-live="polite">`, mensalidade em `data-quote-recurring`.
+     - Bloco "NÃO INCLUÍDO / COBRADO À PARTE" (domínio, hospedagem se não inclusa, anúncios, redes sociais, novas funcionalidades etc.), sempre visível.
+     - Botão `data-quote-cta` "Chamar no WhatsApp" (o JS monta o link com pacote + adicionais + total).
+     - Linha de transparência: "Você sabe o prazo, o preço e o que vai receber antes de pagar qualquer coisa." (só mantenha se o escopo exibido sustentar a frase).
+   - Todos os valores vindos da ficha: faixa vira `[PREENCHER: valor exato]`; nunca mostre faixa como preço fechado.
+   - Aviso curto: "Sistemas sob medida: orçamento após diagnóstico" com CTA para `#sistemas`.
+
+6. `#sistemas` SISTEMAS E AUTOMAÇÃO SOB MEDIDA: explique diferença entre site e sistema; 3 exemplos reais da ficha (cadastro de clientes, agendamentos, pedidos/orçamentos); processo em etapas (diagnóstico, requisitos, MVP, proposta, entrega por etapas, homologação). SEM preço fechado; mensagem "orçamento após diagnóstico".
+
+7. `#presenca-local` PRESENÇA LOCAL: Perfil da Empresa no Google (nota honesta: criação do perfil é gratuita no Google; o serviço da Coonexa é configuração e otimização; aprovação depende do Google e da elegibilidade da empresa), integração com WhatsApp, SEO local básico.
+
+8. `#portfolio` PORTFÓLIO: estrutura do caso La Rose Eventos (problema → solução → funcionalidades → imagens) com `[CONFIRMAR autorização do cliente]`. Casos adicionais como placeholders.
+
+9. `#processo` COMO TRABALHAMOS: diagnóstico → proposta com escopo → desenvolvimento → homologação → entrega documentada → manutenção opcional. Foco em transparência.
+
+10. `#depoimentos`: se SEM DEPOIMENTOS REAIS, deixe o bloco comentado e pronto para ativar (carrossel `data-carousel`).
+
+11. `#faq`: accordion acessível (`<button aria-expanded aria-controls>` + painel `role="region"`), mínimo 8 perguntas: preço, o que a mensalidade cobre, e se eu quiser sem mensalidade, quem cuida de domínio e hospedagem, prazo, alterações depois da entrega, sistemas sob medida, Perfil no Google (elegibilidade).
+
+12. `#contato-final`: headline imperativa, 1 frase de segurança sobre escopo, CTA grande de WhatsApp. SEM escassez falsa.
+
+13. `<footer>`: nome, CNPJ se houver, redes (aria-label), links rápidos, política de privacidade (placeholder), © ano. Linha `dev-credit`.
+
+# COMPONENTES FUTUROS
+Comentados com `<!-- COMPONENTE OPCIONAL: nome -->`: blog, parceiros, equipe, formulário de contato, banner de promoção, aviso LGPD/cookies.
+
+# CONTRATO COM CSS E JS
+- Classes BEM: `.section`, `.section__title`, `.card`, `.btn`, `.btn--primary`, `.btn--whatsapp`, `.btn--ghost`, `.container`, `.quote`, `.quote__tabs`, `.quote__panel`, `.quote__price`, `.quote__addons`.
+- Ganchos: `data-reveal` (+ `data-reveal-delay`), `data-header`, `data-menu-toggle`, `data-menu`, `data-carousel` (e filhos), `data-accordion`, `data-count-to`, `data-video-lazy`, `data-quote`, `data-plan`, `data-price-base`, `data-price-unit`, `data-recurring`, `data-addon`, `data-addon-price`, `data-addon-label`, `data-quote-total`, `data-quote-recurring`, `data-quote-cta`.
+- WhatsApp: `https://wa.me/NUMERO?text=MENSAGEM_URL_ENCODED`, `target="_blank" rel="noopener noreferrer"`.
+
+# REQUISITOS TÉCNICOS
+HTML5 semântico, 1 `<h1>`, alt descritivo, aria-label em ícones/botões, foco visível, `loading="lazy"` abaixo da dobra, `width`/`height` nas imagens, vídeos com `poster` e `preload` adequado, comentários curtos por seção, `style.css` e `script.js` (defer).
+Sem JS, o bloco de orçamento deve continuar legível: o painel do primeiro pacote visível com preços estáticos e o CTA apontando para WhatsApp com mensagem genérica.
+
+# ENTREGA
+1. `index.html` completo em um único bloco.
+2. "PLACEHOLDERS A PREENCHER" (todos os [PREENCHER] e [CONFIRMAR]).
+3. "MÍDIAS NECESSÁRIAS" (dimensões e proporção).
+4. "RISCOS DE CREDIBILIDADE": qualquer frase da página que dependa de confirmação minha para ser verdadeira.
+PROMPT 2: UI, CSS e JS (inclui calculadora de orçamento)
+Você é Designer de UI e Desenvolvedor Front-End especialista em CSS3 e JavaScript Vanilla, com foco em performance e acessibilidade. Aplique o design system e a camada interativa ao HTML da Coonexa sem alterar a estrutura nem os atributos `data-*` (ajustes necessários no HTML devem ser listados no final).
+
+# REGRAS
+1. Estilo coerente em todos os componentes, não só nas cores.
+2. Sem bibliotecas externas (JS puro). Fontes via Google Fonts com `display=swap`.
+3. Se estilo, paleta ou fontes não estiverem definidos na ficha, proponha uma direção coerente com uma empresa de tecnologia premium e acessível, explique em 3 linhas e siga. Pergunte só se a ficha for contraditória.
+4. Respeite `prefers-reduced-motion`.
+5. Valores monetários nunca são hardcoded no JS: leia dos `data-*` do HTML.
+
+# FICHA E ESTILO
+[COLE A FICHA DA COONEXA, seção ESTILO]
+
+# HTML BASE
+[COLE O HTML DO PROMPT 1 ou "use o HTML gerado acima"]
+
+# 1. DESIGN SYSTEM (TOKENS em :root)
+Cores (`--primary`, `--primary-hover`, `--secondary`, `--accent`, `--bg`, `--bg-alt`, `--surface`, `--text`, `--text-muted`, `--border`, `--whatsapp` #25D366), tipografia (`--font-heading`, `--font-body`, `--font-mono` para rótulos técnicos, escala fluida com clamp), espaçamento 4/8, raios, sombras, `--glow`, movimento, z-index. Contraste WCAG AA.
+Estilo: dark premium com superfícies elevadas, tipografia grande em números/preços, rótulos em mono caixa-alta com letter-spacing, divisores de 1px, pontilhado sutil decorativo em cantos de cards, detalhes de cor controlados.
+
+# 2. COMPONENTES
+- Reset moderno, `scroll-padding-top` igual ao header, `:focus-visible` visível.
+- Botões (`--primary`, `--whatsapp` com pulse sutil que para no hover e com reduced motion, `--ghost`) com todos os estados.
+- Header transparente → sólido/desfocado ao rolar; menu mobile em drawer.
+- BLOCO DE ORÇAMENTO (`.quote`): card escuro de cantos grandes; abas em pílula com item ativo invertido (fundo claro, texto escuro) e trilho arredondado; preço em fonte grande leve com unidade pequena; rótulo mono de condição; duas colunas separadas por divisor (empilham no mobile, com INCLUÍDO primeiro); itens incluídos com ícone de seta; adicionais com checkbox customizado e valor alinhado à direita em mono; rodapé com frase de transparência à esquerda e botão WhatsApp pílula claro à direita (empilha no mobile). Transição suave na troca de pacote (fade, sem animar layout). Foco por teclado em abas e checkboxes visível.
+- Demais seções: cards de serviço, pares problema/solução, passos do processo, portfólio, FAQ (ícone que gira), depoimentos (se ativos), footer, `.dev-credit` com hover marcante.
+- Botão flutuante de WhatsApp com safe area.
+- Mobile First, breakpoints 640/768/1024/1280, sem scroll horizontal em 360px.
+
+# 3. JAVASCRIPT (`'use strict'`, módulos `initX()` em um único DOMContentLoaded, falham em silêncio se o elemento não existir)
+1. Header inteligente (esconde ao descer após ~80px, volta ao subir, `is-scrolled`, nunca esconde com menu aberto; rAF + passive).
+2. Menu mobile (aria-expanded, trava scroll, ESC, clique fora/link).
+3. Scroll reveal com IntersectionObserver e stagger; sem JS o conteúdo continua visível.
+4. Âncoras suaves com offset + scrollspy.
+5. FAQ acessível (um aberto por vez, teclado).
+6. Carrossel com scroll-snap, dots, setas do teclado, autoplay opcional desligado com reduced motion.
+7. Contadores `data-count-to` (apenas se houver números reais).
+8. Vídeos `data-video-lazy` (toca visível, pausa ao sair).
+9. CALCULADORA DE ORÇAMENTO (`initQuote`):
+   - Abas com padrão WAI-ARIA tabs: setas esquerda/direita, Home/End, `aria-selected`, painéis com `hidden`.
+   - Ao trocar de pacote, desmarcar adicionais do pacote anterior e recalcular.
+   - Total = `data-price-base` do plano + soma dos `data-addon-price` marcados. Mensalidade exibida separadamente (`data-recurring`), nunca somada ao total de implantação.
+   - Formatar com `Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'})`.
+   - Se algum valor for placeholder (não numérico), exibir "sob consulta" em vez de NaN e ajustar a mensagem do WhatsApp para "valor a confirmar".
+   - Atualizar `<output data-quote-total>` com `aria-live="polite"`.
+   - Montar o link do `data-quote-cta`: `https://wa.me/NUMERO?text=` + mensagem URL-encoded no formato: "Olá! Montei um orçamento no site da Coonexa. Pacote: X. Adicionais: A, B. Total de implantação: R$ N. Mensalidade: R$ M. Quero conversar." Número lido de um atributo `data-whatsapp` do contêiner.
+   - Sem JS, o link estático do HTML continua funcionando.
+10. Micro-interações via CSS (transform/opacity), efeito magnético leve no CTA principal apenas com `hover: hover`.
+11. ANIMAÇÃO ASSINATURA (1, leve e opcional): sugestão de rede de pontos/linhas conectadas em canvas no hero (combina com "conexão"), 60fps, pausa com aba oculta ou hero fora da tela, desativada no mobile fraco e com reduced motion. Diga em 1 linha o que escolheu.
+
+# 4. QUALIDADE
+CSS sem `!important`, seletores simples, ordem lógica (tokens, base, layout, componentes, utilitários, responsivo). JS sem globais soltas, sem layout thrashing, sem console.log. Meta Lighthouse Mobile ≥ 90 em Performance e ≥ 95 em Acessibilidade e SEO.
+
+# ENTREGA
+1. `style.css` comentado.
+2. `script.js` comentado.
+3. "AJUSTES NECESSÁRIOS NO HTML".
+4. "COMO PERSONALIZAR EM 2 MINUTOS" (tokens a trocar).
+5. "COMO ATUALIZAR PREÇOS" (quais atributos `data-*` editar no bloco de orçamento).
+CHECKLIST FINAL
+ Todos os [PREENCHER] e [CONFIRMAR] resolvidos; nada inventado no ar.
+ Preços exatos definidos para cada pacote e adicional (o site não exibe faixas como preço fechado).
+ Preços de manutenção e limpeza de computadores definidos.
+ A frase "orçamento fechado" é sustentada pelo escopo, pelo prazo e pela lista de itens não incluídos exibidos no bloco.
+ Soma da calculadora conferida manualmente em cada aba; mensalidade separada do total.
+ Mensagem do WhatsApp gerada pela calculadora testada no celular.
+ Autorização da La Rose para uso de nome e imagens (ou caso removido).
+ Nenhum depoimento, número de clientes ou resultado sem comprovação.
+ Mapa e endereço apenas se a Coonexa for elegível; senão, área atendida.
+ Política de privacidade publicada (há formulário ou coleta de dados?).
+ Testado em 360, 768 e 1280px; teclado completo; contraste AA; Lighthouse ≥ 90.
+ Domínio, hospedagem e responsável pela renovação definidos.
