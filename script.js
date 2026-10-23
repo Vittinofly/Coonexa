@@ -62,7 +62,7 @@ function initHeader() {
       const bounds = section.getBoundingClientRect();
       return bounds.top <= headerLine && bounds.bottom > headerLine;
     });
-    const darkSections = new Set(["inicio", "presenca-local", "contato-final"]);
+    const darkSections = new Set(["inicio", "presenca-local", "contato-final", "pagina"]);
     header.classList.toggle("is-light", activeSection ? !darkSections.has(activeSection.id) : currentY > 24);
 
     if (toggle.getAttribute("aria-expanded") !== "true") {

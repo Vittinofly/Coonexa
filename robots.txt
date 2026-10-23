@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://coonexaweb.netlify.app/sitemap.xml
+Sitemap: https://coonexa.netlify.app/sitemap.xml
