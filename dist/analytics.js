@@ -94,14 +94,12 @@
     });
   });
 
-  document.querySelectorAll("form[data-netlify='true']").forEach((form) => {
-    form.addEventListener("submit", () => {
-      if (consent === "accepted" && typeof window.gtag === "function") {
-        window.gtag("event", "generate_lead", {
-          method: "contact_form",
-          transport_type: "beacon"
-        });
-      }
-    });
+  document.addEventListener("coonexa:lead-submitted", () => {
+    if (consent === "accepted" && typeof window.gtag === "function") {
+      window.gtag("event", "generate_lead", {
+        method: "contact_form",
+        transport_type: "beacon"
+      });
+    }
   });
 })();

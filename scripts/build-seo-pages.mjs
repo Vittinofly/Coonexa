@@ -263,7 +263,7 @@ const contentPages = [
     intro: "Esta página descreve, em linguagem simples, como os recursos atuais deste site podem tratar dados. Confirme que estes procedimentos correspondem à operação real antes de ativar formulários ou analytics em produção.",
     paragraphs: [
       ["Contato pelo WhatsApp ou e-mail", "Quando você escolhe abrir uma conversa, o WhatsApp ou o seu provedor de e-mail processa os dados necessários para prestar o serviço. O site não recebe automaticamente o conteúdo dessas conversas."],
-      ["Formulário do site", "Quando o formulário é publicado e ativado, os campos enviados são recebidos por infraestrutura de formulários da Netlify e encaminhados à Coonexa para responder à solicitação. Informe somente dados necessários ao atendimento. A Coonexa não solicita senhas, dados bancários nem informações sensíveis pelo formulário."],
+      ["Formulário do site", "Quando a integração estiver ativada, os dados enviados pelo formulário serão encaminhados pela infraestrutura da Netlify para uma planilha Google Sheets controlada pela Coonexa, para responder à solicitação. O registro inclui a data e a hora do envio. Informe somente dados necessários ao atendimento. A Coonexa não solicita senhas, dados bancários nem informações sensíveis pelo formulário."],
       ["Medição de audiência", "O Google Analytics 4 está desativado até que a Coonexa configure um identificador válido e o visitante aceite analytics pelo controle exibido no site. A recusa mantém o serviço de medição desativado. O Google pode tratar dados conforme suas políticas e configurações de região e retenção."],
       ["Solicitações sobre dados", "Para perguntar sobre uma mensagem ou solicitação enviada, escreva para victorhugo.slmb@gmail.com. A Coonexa avaliará a solicitação e o tratamento aplicável conforme o contexto e as obrigações legais."],
       ["Revisão deste aviso", "Antes de ativar o formulário e analytics, revise a base legal, o fluxo operacional, os prazos de guarda e as informações dos fornecedores. Atualize este aviso quando o funcionamento mudar."]
@@ -482,7 +482,9 @@ function renderContactForm() {
           <textarea id="mensagem" name="mensagem" rows="5" required maxlength="2000"></textarea>
           <label class="contact-form__consent"><input name="consentimento" type="checkbox" value="aceito" required><span>Autorizo o uso destes dados para receber resposta a esta solicitação. Li o <a href="/privacidade/">aviso de privacidade</a>. *</span></label>
           <button class="button button--submit" type="submit"><span>Enviar solicitação</span><span class="button__arrow" aria-hidden="true">↗</span></button>
-          <p class="contact-form__note">O envio utiliza o processamento de formulários da Netlify. Enviar a solicitação não cria obrigação de contratação.</p>
+          <p class="contact-form__status" data-form-status role="status" aria-live="polite" hidden></p>
+          <button class="contact-form__fallback" type="button" data-netlify-fallback hidden>Usar envio alternativo</button>
+          <p class="contact-form__note">Com a integração ativa, sua mensagem e a data do envio serão registradas na planilha de atendimento da Coonexa. Enviar a solicitação não cria obrigação de contratação.</p>
         </form>
       </div>
     </section>`;
@@ -752,6 +754,7 @@ function renderPage(page) {
     <script src="/script.js" defer></script>
     <script src="/analytics-config.js" defer></script>
     <script src="/analytics.js" defer></script>
+    ${page.type === "contact" ? '<script src="/contact-form.js" defer></script>' : ""}
     <script type="application/ld+json">${renderStructuredData(page)}</script>
     ${isArticle ? `<meta property="article:section" content="${esc(page.keyword)}"><meta property="article:modified_time" content="${dateModified}">` : ""}
   </head>
@@ -824,7 +827,7 @@ async function main() {
   await rm(outputDirectory, { recursive: true, force: true });
   await mkdir(outputDirectory, { recursive: true });
 
-  for (const file of ["index.html", "style.css", "script.js", "analytics.js", "analytics-config.js", "_headers"]) {
+  for (const file of ["index.html", "style.css", "script.js", "analytics.js", "analytics-config.js", "contact-form.js", "_headers"]) {
     await cp(resolve(process.cwd(), file), resolve(outputDirectory, file));
   }
   const imageDirectory = resolve(outputDirectory, "img");

@@ -31,6 +31,7 @@
     <script src="/script.js" defer></script>
     <script src="/analytics-config.js" defer></script>
     <script src="/analytics.js" defer></script>
+    <script src="/contact-form.js" defer></script>
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -205,7 +206,9 @@
           <textarea id="mensagem" name="mensagem" rows="5" required maxlength="2000"></textarea>
           <label class="contact-form__consent"><input name="consentimento" type="checkbox" value="aceito" required><span>Autorizo o uso destes dados para receber resposta a esta solicitação. Li o <a href="/privacidade/">aviso de privacidade</a>. *</span></label>
           <button class="button button--submit" type="submit"><span>Enviar solicitação</span><span class="button__arrow" aria-hidden="true">↗</span></button>
-          <p class="contact-form__note">O envio utiliza o processamento de formulários da Netlify. Enviar a solicitação não cria obrigação de contratação.</p>
+          <p class="contact-form__status" data-form-status role="status" aria-live="polite" hidden></p>
+          <button class="contact-form__fallback" type="button" data-netlify-fallback hidden>Usar envio alternativo</button>
+          <p class="contact-form__note">Com a integração ativa, sua mensagem e a data do envio serão registradas na planilha de atendimento da Coonexa. Enviar a solicitação não cria obrigação de contratação.</p>
         </form>
       </div>
     </section>

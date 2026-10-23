@@ -1,3 +1,6 @@
 [build]
   command = "node scripts/build-seo-pages.mjs"
   publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
