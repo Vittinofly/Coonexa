@@ -491,11 +491,17 @@ function renderContactForm() {
 function renderSections(page) {
   if (page.type === "success") {
     return `
-      <section class="section section--light">
-        <div class="container content-highlights">
-          <h2>Próximo passo</h2>
-          <p>Se preferir, você também pode iniciar uma conversa pelo WhatsApp.</p>
-          <a class="text-link" href="${whatsappHref("Olá! Enviei uma solicitação pelo site da Coonexa.")}" target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+      <section class="section section--light success-next">
+        <div class="container">
+          <div class="success-next__card">
+            <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span> O que acontece agora</p>
+            <div class="success-next__steps">
+              <div class="success-next__step"><span>01</span><p>Vamos revisar as informações que você enviou.</p></div>
+              <div class="success-next__step"><span>02</span><p>A Coonexa responderá pelo contato informado na solicitação.</p></div>
+            </div>
+            <p class="success-next__note">Se quiser complementar sua mensagem, fale diretamente com a gente pelo WhatsApp.</p>
+            <a class="text-link" href="${whatsappHref("Olá! Enviei uma solicitação pelo site da Coonexa e gostaria de acrescentar uma informação.")}" target="_blank" rel="noopener noreferrer">Continuar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </section>`;
   }
@@ -701,6 +707,17 @@ function renderPage(page) {
   const isArticle = page.type === "article";
   const dateModified = new Date().toISOString().slice(0, 10);
   const pageBody = renderSections(page);
+  const pageHero = page.type === "success" ? renderSuccessHero(page) : `
+      <section class="page-hero" id="pagina">
+        <div class="page-hero__orb" aria-hidden="true"></div>
+        <div class="container page-hero__inner">
+          ${renderBreadcrumbs(page)}
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span>${esc(page.keyword)}</p>
+          <h1>${esc(page.h1)}</h1>
+          <p class="page-hero__intro">${esc(page.intro)}</p>
+          <a class="button button--light" href="${whatsappHref(`Olá! Quero conversar sobre ${page.keyword}.`)}" target="_blank" rel="noopener noreferrer"><span>Converse com a Coonexa</span><span class="button__arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </section>`;
 
   return `<!doctype html>
 <html lang="pt-BR">
@@ -742,16 +759,7 @@ function renderPage(page) {
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
     ${renderHeader()}
     <main id="conteudo">
-      <section class="page-hero" id="pagina">
-        <div class="page-hero__orb" aria-hidden="true"></div>
-        <div class="container page-hero__inner">
-          ${renderBreadcrumbs(page)}
-          <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span>${esc(page.keyword)}</p>
-          <h1>${esc(page.h1)}</h1>
-          <p class="page-hero__intro">${esc(page.intro)}</p>
-          <a class="button button--light" href="${whatsappHref(`Olá! Quero conversar sobre ${page.keyword}.`)}" target="_blank" rel="noopener noreferrer"><span>Converse com a Coonexa</span><span class="button__arrow" aria-hidden="true">↗</span></a>
-        </div>
-      </section>
+      ${pageHero}
       ${pageBody}
     </main>
     ${renderFooter()}
@@ -759,6 +767,23 @@ function renderPage(page) {
   </body>
 </html>
 `;
+}
+
+function renderSuccessHero(page) {
+  return `
+      <section class="page-hero success-hero" id="pagina">
+        <div class="page-hero__orb" aria-hidden="true"></div>
+        <div class="container page-hero__inner success-hero__inner">
+          <span class="success-hero__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7"></path></svg></span>
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Solicitação enviada</p>
+          <h1>${esc(page.h1)}</h1>
+          <p class="page-hero__intro">${esc(page.intro)}</p>
+          <div class="success-hero__actions">
+            <a class="button button--light" href="/"><span>Voltar ao início</span><span class="button__arrow" aria-hidden="true">↗</span></a>
+            <a class="text-link text-link--light" href="${whatsappHref("Olá! Enviei uma solicitação pelo site da Coonexa.")}" target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>`;
 }
 
 function renderHeader() {
@@ -843,20 +868,16 @@ function renderSuccessPage() {
   const page = {
     path: "/obrigado/",
     title: "Solicitação recebida | Coonexa",
-    description: "Recebemos sua solicitação de contato. Obrigado por falar com a Coonexa.",
+    description: "Sua mensagem foi enviada à Coonexa. Veja os próximos passos da sua solicitação.",
     keyword: "Contato Coonexa",
     type: "success",
-    h1: "Recebemos sua solicitação",
-    intro: "Obrigado por entrar em contato. A Coonexa recebeu sua mensagem e poderá responder pelos dados informados. Se preferir, você também pode iniciar uma conversa pelo WhatsApp.",
+    h1: "Recebemos sua mensagem.",
+    intro: "Obrigado por contar o que você precisa. A equipe Coonexa vai analisar sua solicitação e responder pelo contato informado.",
     faqs: []
   };
   return renderPage({
     ...page,
-    description: `${page.description} Esta página não deve aparecer nos resultados de busca.`,
-    path: "/obrigado/",
-    title: page.title,
-    h1: page.h1,
-    intro: page.intro
+    description: page.description
   }).replace('name="robots" content="index, follow, max-image-preview:large"', 'name="robots" content="noindex, follow"');
 }
 
